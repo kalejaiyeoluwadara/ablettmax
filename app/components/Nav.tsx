@@ -24,7 +24,7 @@ function Nav() {
       </section>
       <section>
         <button className="bg-primary font-semibold text-white px-6 py-2 rounded-md">
-          Book a Call
+          Book a call
         </button>
       </section>
     </nav>

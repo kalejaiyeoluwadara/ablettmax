@@ -25,7 +25,7 @@ function OurProducts() {
   return (
     <main className="px-[60px] mb-[120px] mt-32">
       <section>
-        <p className="text-[#0074D9] text-xl font-medium mb-5 ">
+        <p className="text-[#0074D9] tracking-[-1px] text-xl font-medium mb-5 ">
           Making usable products for everyday life
         </p>
         <h1 className="text-black">Our products</h1>

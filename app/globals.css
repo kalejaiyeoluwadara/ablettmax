@@ -14,9 +14,17 @@ body {
 }
 
 h1 {
-  @apply text-5xl font-semibold;
+  @apply text-[50px] font-semibold tracking-[-4px] leading-[54px];
 }
-
+p {
+  @apply text-xl font-medium tracking-[-1px] leading-[24px];
+}
+.tracking_2 {
+  @apply !tracking-[-2px];
+}
+.tracking_4 {
+  @apply !tracking-[-4px];
+}
 @keyframes marquee {
   0% {
     transform: translateX(0);

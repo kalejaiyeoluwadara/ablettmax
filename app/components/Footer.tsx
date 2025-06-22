@@ -3,26 +3,8 @@ import React from "react";
 import { Logo, NavLogo, Logo2 } from "@/public/images";
 import { Icons } from "./shared/icons";
 import ListCard from "./shared/ListCard";
-
+import { socials } from "@/app/utils";
 function Footer() {
-  const socials = [
-    {
-      icon: <Icons.InstagramIcon />,
-      link: "https://www.instagram.com/your_instagram_profile",
-    },
-    {
-      icon: <Icons.FacebookIcon />,
-      link: "https://www.facebook.com/your_facebook_profile",
-    },
-    {
-      icon: <Icons.YoutubeIcon />,
-      link: "https://www.youtube.com/your_youtube_profile",
-    },
-    {
-      icon: <Icons.LinkedinIcon />,
-      link: "https://www.linkedin.com/in/your_linkedin_profile",
-    },
-  ];
   return (
     <main className="min-h-[400px] overflow-hidden relative flex justify-between items-center bg-black w-full px-[60px] ">
       <section>

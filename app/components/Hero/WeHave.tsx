@@ -6,8 +6,8 @@ function WeHave() {
     <main className="bg-white md:min-h-[130vh] px-[60px]  py-[90px] ">
       <div className="flex justify-between items-end">
         <div>
-          <h1 className="text-black">We have what you need</h1>
-          <p className="mt-6 text-black">
+          <h1 className="text-black tracking_2">We have what you need</h1>
+          <p className="mt-6 text-xl font-medium tracking-[-1px] text-black">
             We’re passionate about solving problems
           </p>
         </div>
