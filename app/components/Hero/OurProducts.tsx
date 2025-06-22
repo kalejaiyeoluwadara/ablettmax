@@ -15,7 +15,7 @@ function OurProducts() {
       packaging: "Flakes",
     },
     {
-      title: "PET",
+      title: "PE",
       description:
         "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
       image: Pet,
