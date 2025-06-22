@@ -27,7 +27,7 @@ function ProductCard({
 }: ProductCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
-    setActive(active ? 0 : 1);
+    setActive(index);
   };
   return (
     <div

@@ -23,7 +23,7 @@ function OurProducts() {
     },
   ];
   return (
-    <main className="px-[60px] mt-32">
+    <main className="px-[60px] mb-[120px] mt-32">
       <section>
         <p className="text-[#0074D9] text-xl font-medium mb-5 ">
           Making usable products for everyday life
