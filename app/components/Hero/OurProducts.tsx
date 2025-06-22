@@ -1,3 +1,4 @@
+"use client";
 import { Pet } from "@/public/images";
 import ProductCard from "../shared/ProductCard";
 import { useState } from "react";
@@ -29,11 +30,13 @@ function OurProducts() {
         </p>
         <h1 className="text-black">Our products</h1>
       </section>
-      <section className="mt-[90px]">
+      <section className="mt-[90px] flex gap-6">
         {products.map((product, index) => (
           <ProductCard
+            index={index}
             key={product.title}
-            active={active === index ? 1 : 0}
+            setActive={setActive}
+            active={active === index ? true : false}
             {...product}
           />
         ))}

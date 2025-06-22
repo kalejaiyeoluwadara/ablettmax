@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { Pet, shirt, water } from "@/public/images";
 import { StaticImageData } from "next/image";
 
@@ -10,7 +10,9 @@ interface ProductCardProps {
   image: StaticImageData;
   capacity: string;
   packaging?: string;
-  active: number;
+  active: boolean;
+  setActive: Dispatch<SetStateAction<number>>;
+  index: number;
 }
 
 function ProductCard({
@@ -20,10 +22,18 @@ function ProductCard({
   capacity,
   packaging,
   active,
+  setActive,
+  index,
 }: ProductCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setActive(active ? 0 : 1);
+  };
   return (
-    <div className="bg-[#F0F0F0] rounded-[22px] w-[300px] h-fit py-12 px-6  ">
+    <div
+      onClick={handleClick}
+      className="bg-[#F0F0F0] cursor-pointer rounded-[22px] w-[300px] h-fit py-12 px-6  "
+    >
       <div className="flex mb-5 w-full justify-between items-center">
         <p className="text-black text-2xl font-semibold">{title}</p>
         {packaging && (
@@ -46,11 +56,11 @@ function ProductCard({
           <div className="w-[30px] flex items-center justify-center ">
             <Image src={shirt} alt="shirt" />
           </div>
-          {packaging}
+          Textiles & Packaging
         </li>
       </div>
       <div className="mt-9 flex gap-3 items-center">
-        <p className="text-black text-base font-semibold">View product image</p>
+        <p className="text-black text-base font-semibold">image</p>
         <Image className="h-6 w-6 rounded-md" src={image} alt="Pet" />
       </div>
     </div>
