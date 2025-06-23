@@ -3,34 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { Icons } from "../shared/icons";
 import AboutCard from "../shared/AboutCard";
+import { aboutCards } from "@/app/utils";
 
 function MoreAboutUs() {
-  const aboutCards = [
-    {
-      title: "Sustainability First",
-      count: 1,
-      icon: <Icons.TruckIcon />,
-      mission: "Our mission",
-      description:
-        "To transform plastic waste into opportunity—creating cleaner environments.",
-    },
-    {
-      title: "Sustainability First",
-      count: 1,
-      icon: <Icons.TruckIcon />,
-      mission: "Our mission",
-      description:
-        "To transform plastic waste into opportunity—creating cleaner environments.",
-    },
-    {
-      title: "Sustainability First",
-      count: 1,
-      icon: <Icons.TruckIcon />,
-      mission: "Our mission",
-      description:
-        "To transform plastic waste into opportunity—creating cleaner environments.",
-    },
-  ];
   return (
     <main className="bg-black px-[60px] py-[90px] ">
       <h1 className="text-white tracking_2">

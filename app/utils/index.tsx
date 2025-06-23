@@ -1,3 +1,4 @@
+import { Pet, Video, Tree } from "@/public/images";
 import { Icons } from "../components/shared/icons";
 
 export const navLinks = [
@@ -48,5 +49,66 @@ export const socials = [
   {
     icon: <Icons.LinkedinIcon />,
     link: "https://www.linkedin.com/in/your_linkedin_profile",
+  },
+];
+
+export const products = [
+  {
+    title: "PET",
+    description:
+      "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
+    image: Pet,
+    capacity: "1T Production Capacity",
+    packaging: "Flakes",
+  },
+  {
+    title: "PP",
+    description:
+      "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
+    image: Pet,
+    capacity: "1T Production Capacity",
+  },
+  {
+    title: "HDPE",
+    description:
+      "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
+    image: Pet,
+    capacity: "100T Production Capacity",
+  },
+  {
+    title: "PE",
+    description:
+      "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
+    image: Pet,
+    capacity: "1T Production Capacity",
+  },
+];
+export const aboutCards = [
+  {
+    title: "Sustainability First",
+    count: 1,
+    icon: <Icons.TruckIcon />,
+    mission: "Our mission",
+    image: Video,
+    description:
+      "To transform plastic waste into opportunity—creating cleaner environments.",
+  },
+  {
+    title: "Sustainability First",
+    count: 2,
+    icon: <Icons.PathIcon />,
+    mission: "Our Values",
+    image: Tree,
+    description:
+      "Our commitment to sustainability and environmental responsibility is at the heart of our mission.",
+  },
+  {
+    title: "Sustainability First",
+    count: 3,
+    icon: <Icons.TruckIcon />,
+    mission: "Our team",
+    image: Video,
+    description:
+      "People pushing boundaries in recycling, community renewal, and sustainable development.",
   },
 ];

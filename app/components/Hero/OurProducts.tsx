@@ -1,27 +1,46 @@
 "use client";
-import { Pet } from "@/public/images";
 import ProductCard from "../shared/ProductCard";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { products } from "@/app/utils";
+import { Icons } from "../shared/icons";
 
 function OurProducts() {
   const [active, setActive] = useState(0);
-  const products = [
-    {
-      title: "PET",
-      description:
-        "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
-      image: Pet,
-      capacity: "1T Production Capacity",
-      packaging: "Flakes",
-    },
-    {
-      title: "PE",
-      description:
-        "We’re pushing boundaries in recycling, community renewal, and sustainable development.",
-      image: Pet,
-      capacity: "1T Production Capacity",
-    },
-  ];
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const checkScrollAvailability = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollAvailability();
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", checkScrollAvailability);
+      return () =>
+        scrollContainer.removeEventListener("scroll", checkScrollAvailability);
+    }
+  }, []);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="px-[60px] mb-[120px] mt-32">
       <section>
@@ -30,7 +49,10 @@ function OurProducts() {
         </p>
         <h1 className="text-black">Our products</h1>
       </section>
-      <section className="mt-[90px] flex gap-6">
+      <section
+        ref={scrollContainerRef}
+        className="mt-[90px] flex gap-6 hidden_scrollbar overflow-x-auto"
+      >
         {products.map((product, index) => (
           <ProductCard
             index={index}
@@ -40,6 +62,24 @@ function OurProducts() {
             {...product}
           />
         ))}
+      </section>
+      <section className="flex gap-3 mt-9">
+        <div
+          onClick={scrollLeft}
+          className={`flex h-[50px] w-[50px] rounded-full items-center justify-center cursor-pointer transition-colors ${
+            canScrollLeft ? "bg-[#FAFAFA]" : "bg-[#F0F0F0]"
+          }`}
+        >
+          <Icons.ArrowLeft />
+        </div>
+        <div
+          onClick={scrollRight}
+          className={`flex h-[50px] w-[50px] rounded-full items-center justify-center cursor-pointer transition-colors ${
+            canScrollRight ? "bg-[#F0F0F0]" : "bg-[#F0F0F0]"
+          }`}
+        >
+          <Icons.ArrowRight />
+        </div>
       </section>
     </main>
   );

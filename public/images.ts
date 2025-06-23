@@ -10,9 +10,10 @@ import shirt from "@/public/images/shirt.svg";
 import water from "@/public/images/water.svg";
 import Pet from "@/public/images/Pet.jpg";
 import Coc from "@/public/images/cocoa.jpg";
+import Tree from "@/public/images/Tree.jpg";
 
 export {
-  NavLogo,
+  NavLogo,Tree,
   Logo,
   Logo2,
   Coc,
