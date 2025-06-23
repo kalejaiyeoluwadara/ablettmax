@@ -1,3 +1,4 @@
+"use client";
 import { Coc } from "@/public/images";
 import Image from "next/image";
 import React from "react";
@@ -17,12 +18,12 @@ function SubScribeAndBlogSection() {
           <input
             type="text"
             placeholder="Your name *"
-            className="w-full h-[60px] px-3 outline-none border-b border-b-[#0F9F4B] placeholder:text-[#F0F0F0] bg-transparent "
+            className="w-full h-[60px] px-3 outline-none border-b border-b-[#0F9F4B] placeholder:text-[#F0F0F0] bg-transparent text-white"
           />
           <input
             type="text"
             placeholder="Email address *"
-            className="w-full h-[60px] px-3 outline-none border-b border-b-[#0F9F4B] placeholder:text-[#F0F0F0] bg-transparent "
+            className="w-full h-[60px] px-3 outline-none border-b border-b-[#0F9F4B] placeholder:text-[#F0F0F0] bg-transparent text-white"
           />
           <div className="flex mt-12 px-[18px] w-full items-center justify-between">
             <button className="rounded-md font-semibold text-gray-300 px-6 py-2 bg-[#0F9F4B]  ">
@@ -39,11 +40,11 @@ function SubScribeAndBlogSection() {
         <p className="text-white text-lg mt-6 text-center">
           Stories about sustainability, products, and more.
         </p>
-        <div className="overflow-hidden rounded-2xl relative w-[375px] h-[250px]  mt-[60px]">
+        <div className="overflow-hidden group rounded-2xl relative w-[375px] h-[250px]  mt-[60px]">
           <Image
             src={Coc}
             alt="Coc"
-            className=" absolute z-10 top-0 left-0 w-full h-full object-cover"
+            className=" absolute group-hover:scale-[1.3] transition-all duration-300 z-10 top-0 left-0 w-full h-full object-cover"
           />
           <div className="z-20 relative px-[14px] py-[24px] flex flex-col h-full justify-between items-start ">
             <button className="rounded-full  items-center bg-white text-black flex gap-2 text-sm font-semibold px-4 py-2">

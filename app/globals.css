@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,14 +11,17 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Geist", sans-serif;
 }
 
 h1 {
   @apply text-[50px] font-semibold tracking-[-4px] leading-[54px];
 }
+button {
+  @apply hover:bg-opacity-80 transition-all duration-300;
+}
 p {
-  @apply text-xl font-medium tracking-[-1px] leading-[24px];
+  @apply text-xl font-medium  leading-[24px];
 }
 .tracking_2 {
   @apply !tracking-[-2px];
